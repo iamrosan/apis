@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech</title>
+    
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: antiquewhite;
+        }
+        /* .wrapper{
+            border: 2px solid black;
+            width: 80%;
+            margin: 10px auto;
+            position: relative;
+        } */
+        .container{
+            border: 2px solid black;
+            width: 80%;
+            margin: auto;
+            display: flex;
+            /* justify-content: center; */
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .logo{
+            width: 60%;
+            /* margin: auto; */
+            border: 2px solid red;
+            position: relative;
+            text-align: center;
+        }
+        img{
+            width: 70px;
+            height: auto;
+            left: 50%;
+        }
+        .form-dv{
+            text-align: center;
+            margin: 20px 0;
+        }
+        .form-ele{
+            margin: 10px 0 ;
+        }
+        button{
+            padding: 8px;
+            border: none;
+            outline: none;
+            background-color: rgb(110, 106, 106);
+            color: white;
+            transition: background-color .5s linear;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: black;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="logo">
+                <img src="./img/Computer_speaks.png" alt="logo">
+            </div>
+            <div class="main-div">
+                <form class="form-dv">
+                    <textarea id="text" placeholder="Type your  text here..." cols="70" rows="2"></textarea>
+                    <div class="form-ele">
+                        <label for="speed">Speed</label>
+                        <div id="speed-val">1</div>
+                        <input type="range" id="speed" min="0.5" max="2" value="1" step="0.1">
+                    </div>
+                    <div class="form-ele">
+                        <label for="pitch">Pitch</label>
+                        <div id="speed-val">0</div>
+                        <input type="range" id="speed" min="0" max="2" value="0" step="0.1">
+                    </div>
+                    <div class="form-ele">
+                        <select id="select-voice" style="width: 250px;"></select>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

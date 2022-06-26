@@ -1,0 +1,13 @@
+application programming interface aka api 
+
+# web apis
+
+# framework vs library
+
+#remote apis
+
+|
+V
+
+# REST (representational state transfer)
+
